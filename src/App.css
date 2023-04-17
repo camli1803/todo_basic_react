@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
+  font-size: 40px;
   color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: darkblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#toast-msg {
+  position: fixed;
+  top: 32px;
+  right: 40px;
+}
+
+.input-data {
+  margin: auto;
+  margin-top: 40px;
+  width: 50%;
+}
+
+.input-data .input-block {
+  padding: 10px;
+  padding-left: 25px;
+  width: 40%;
+  border: 1px solid #00008b;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.input-block.invalid {
+  border:2px solid red;
+}
+
+::placeholder {
+  color: darkblue;
+  font-size: 14px;
+}
+
+.input-data .input-block:focus {
+  border: 2px solid darkblue;
+}
+/* 
+.input-data .input-message {
+  display: block;
+  margin: auto;
+  width: 50%;
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 15px;
+} */
+
+.input-data button {
+  padding: 10px;
+  border: 2px solid darkblue;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 700;
+  color: blue;
+  background-color: rgb(197, 207, 240);
+}
+
+.input-data button:hover {
+  font-size: 16px;
+  background-color: rgb(111, 140, 233);
+  border: 3px solid darkblue;
+}
+.todolist-content {
+ border: 3px solid darkblue;
+ border-radius: 50px;
+ width: 50%;
+ margin: auto;
+ margin-top: 50px;
+ height: 500px; 
+ overflow: scroll;
+}
+
+.todolist-content ol {
+  margin-top: 20px;
+}
+
+.todolist-content ol li {
+  width: 70%;
+  margin: auto;
+  position: relative;
+  margin-top: 20px;
+}
+
+li .li-show {
+  position: relative;
+}
+
+li strong {
+  display: block;
+  max-width: 70%;
+  position: absolute;
+  left: 10px;
+  text-align: left;
+}
+
+li strong::first-letter {
+  text-transform: uppercase;
+}
+
+li .li-icon {
+  display: block;
+  position: absolute;
+  right: 10px;
+  overflow: hidden;
+}
+.li-icon i {
+  display: block;
+  float: left;
+  opacity: 0.7;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-right: 1px solid darkblue;
+}
+
+li i:not(.nothover):hover {
+  font-size: 22px;
+  border-right: none;
+  opacity: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.fa-circle-check {
+  color: rgb(21, 146, 53);
+}
+
+.fa-pen {
+  color: #333;
+}
+
+.fa-trash {
+  color: rgb(234, 56, 56);
 }
